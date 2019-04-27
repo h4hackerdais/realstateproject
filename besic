@@ -1,0 +1,19 @@
+python3 manage.py startapp pages
+settings.py array INSTALLED_APPS add pages
+pages folder inside create new file urls.py
+urls.py add all urls
+views.py add all function
+blade base.html extends all file
+
+
+
+settings.py end text add this line
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    // dist folder name i rename to static
+    os.path.join(BASE_DIR,'realstateproject/static')
+]
+
+put your dist(dist folder rename static) folder inside settings.py root folder after that run this command
+python3 manage.py collectstatic // this command automatic generate static folder
